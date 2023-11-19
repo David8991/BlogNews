@@ -7,7 +7,7 @@
                         <div class="mt-5">
                             <h2 class="text-primary mb-3 fs-3">{{ $data->title }}</h2>
                             <p class="blog-post-meta mb-3">
-                                Опубликовано: {{ $data->published }}
+                                Опубликовано: {{ \Carbon\Carbon::parse($data->published)->locale('ru')->diffForHumans() }}
                             </p>
                             <div class="d-flex justify-content-between  mb-3">
                                 @if(isset($data->creator))
