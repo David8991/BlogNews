@@ -21,7 +21,7 @@
                         @endforeach
                     </span>
                     <span>Category: <b>{{ $el->category }}</b></span>
-                    <span>Created: {{ $el->published }}</span>
+                    <span>Created: {{ \Carbon\Carbon::parse($el->published)->locale('ru')->diffForHumans() }}</span>
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ $el->title }}</h4>
@@ -57,7 +57,7 @@
                 <div class="card-header d-flex justify-content-between">
                     <span>Creator: <b>{{ $el->creator }}</b></span>
                     <span>Category: <b>{{ $el->category }}</b></span>
-                    <span>Created: {{ $el->published }}</span>
+                    <span>Created: {{ \Carbon\Carbon::parse($el->published)->locale('ru')->diffForHumans() }}</span>
                 </div>
                 <div class="card-body">
                     <h4 class="card-title">{{ $el->title }}</h4>
@@ -112,7 +112,7 @@
                             @endforeach
                         </span>
                         <span>Category: <b>{{ $el->category }}</b></span>
-                        <span>Created: {{ $el->published }}</span>
+                        <span>Created: {{ \Carbon\Carbon::parse($el->published)->locale('ru')->diffForHumans() }}</span>
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{{ $el->title }}</h4>
