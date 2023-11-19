@@ -16,7 +16,7 @@
             <div class="row g-5">
                 <div class="col-md-8">
                     <h3 class="text-primary">{{ $data[0]->title }}</h3>
-                    <p class="blog-post-meta">{{ $data[0]->pubDate }}</p>
+                    <p class="blog-post-meta"><b>Published: </b>{{ \Carbon\Carbon::parse($data[0]->pubDate)->locale('ru')->diffForHumans() }}</p>
                     @if(isset($data[0]->creator))
                         <p class="blog-post-meta">Автор: {{ $data[0]->creator[0] }}</p>
                     @endif
