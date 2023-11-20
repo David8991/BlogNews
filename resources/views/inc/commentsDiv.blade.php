@@ -21,7 +21,7 @@
         @endforeach
     @endif
     <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary btn-sm comments-btn hidden-class">Показать еще</button>
+        <button type="button" class="btn btn-info btn-sm comments-btn hidden-class">Показать еще</button>
     </div>
 </div>
 
