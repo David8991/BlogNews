@@ -17,17 +17,13 @@ class usersController extends Controller
     }
 
     // public function usersEdit(Request $req) {
-    //     // return redirect()->route("users");
-    //     // dd($req);
+    //     $name = $req->input('name');
+    //     $userid = $req->input('userId');
 
-    //     $name = $req->get('name');
-    //     $email = $req->get('email');
-
-    //     User::where('email', $email)->update([
-    //         "name" => "da"
+    //     User::where('id', $userid)->update([
+    //         "name" => $name,
     //     ]);
-    //     // $number = $request->get('number');
 
-    //     return response()->json(['result'=>'Ajax request submitted successfully']);
+    //     return response()->json(['result'=>'fetch request submitted successfully']);
     // }
 }

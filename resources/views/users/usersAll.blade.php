@@ -13,13 +13,16 @@
                                     <img src="../avatar.png" alt="avatar">
                                 </div>
                                 <div class="mt-5 grid gap-2 px-3">
+                                    <input type="hidden" name="userId" id="userId" value="{{ $el->id }}">
                                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                                         <div><b>Name:</b></div> 
                                         <div class="name">{{ $el->name }}</div> 
+                                        <!-- <button class="btn btn-warning edit-name">Edit</button> -->
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center flex-wrap">
                                         <div><b>Email:</b></div> 
                                         <div>{{ $el->email }}</div> 
+                                        <!-- <button class="btn btn-warning edit-email">Edit</button> -->
                                     </div>
                                 </div>
                                 <hr>
@@ -46,13 +49,13 @@
     </div>
 @endsection
 
-<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 <script>
     setTimeout(
         () => {
             let name = document.querySelectorAll(".edit-name");
             let email = document.querySelectorAll(".edit-email");
-            let csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+            let userId = document.getElementById("userId").value;
 
             name.forEach(el => {
                 console.dir(el.parentElement.nextElementSibling.children[1].innerText);
@@ -65,15 +68,13 @@
                             let div = document.createElement("div");
                             div.innerText = el.previousElementSibling.value;
 
-                            await fetch('/usersEdit', {
-                                method: 'post',
-                                headers: {
-                                    'X-CSRF-TOKEN': csrfToken
-                                },
-                                body: JSON.stringify({"name": name, "email": email})
+                            axios.post('/usersEdit', {
+                                name: name,
+                                username: userId
                             })
-                            .then(response => response.json())
-                            .then(data => console.log(data))
+                            .then(function (response) {
+                                console.log(response);
+                            })
                             .catch(function (error) {
                                 console.log(error);
                             });
