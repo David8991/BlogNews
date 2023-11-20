@@ -20,4 +20,12 @@
             </div>
         @endforeach
     @endif
+    <button type="button" class="btn btn-primary btn-sm comments-btn hidden-class">Small button</button>
 </div>
+
+<script>
+    let showMoreBtn = document.getElementsByClassName("comments-btn");
+    let commentCard = document.querySelectorAll(".commentCont");
+
+    console.dir(commentCard);
+</script>
