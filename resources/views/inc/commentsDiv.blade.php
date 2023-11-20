@@ -55,7 +55,7 @@
             showMoreBtn.classList.remove("hidden-class");
             showMore();
         } 
-        else 
+        else if (commentCard.length < indexCard + 3)
         {
             indexCard = commentCard.length - indexCard;
             showMoreBtn.classList.add("hidden-class");
