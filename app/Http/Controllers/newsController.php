@@ -270,7 +270,7 @@ class newsController extends Controller
     public function usersNewsAll() 
     {   
         //users news
-        $data = articleUser::where("statusArticle", 3)->orderBy('published', "desc")->get();
+        $data = articleUser::where("statusArticle", 3)->orderBy('published', "DESC")->get();
 
         return view("news.usersNewsAll", ["data" => $data]);
     }
@@ -278,7 +278,7 @@ class newsController extends Controller
     public function usersNewsView($idNew) 
     {   
         $data = articleUser::find($idNew);
-        $comment = DB::table('comments')->where("id_post", $idNew)->orderBy("published", "desc")->get();
+        $comment = DB::table('comments')->where("id_post", $idNew)->orderBy("published", "DESC")->get();
 
         return view("news.usersNewsView", ["data" => $data, "comment" => $comment]);
     }
