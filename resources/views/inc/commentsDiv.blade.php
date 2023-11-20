@@ -24,11 +24,11 @@
 </div>
 
 <script>
+    //          Скрипт для ограничения отображения комментариев и их показа через кнопку
+    
     let showMoreBtn = document.querySelector(".comments-btn");
     let commentCard = document.querySelectorAll(".commentCont");
     let indexCard = 0;
-
-    console.dir(commentCard);
 
     function showMore() {
         showMoreBtn.addEventListener("click", () => {
@@ -38,20 +38,19 @@
 
     function cardsShow () 
     {
-        for (let i = indexCard; i < indexCard + 3; i++) 
-        {
-            commentCard[i].classList.remove("hidden-class");
-        }
-
         if (commentCard.length >= indexCard + 3) 
         {
+            for (let i = indexCard; i < indexCard + 3; i++) 
+            {
+                commentCard[i].classList.remove("hidden-class");
+            }
+
             indexCard += 3;
             showMoreBtn.classList.remove("hidden-class");
             showMore();
         }
         else
         {
-            indexCard += commentCard.length - indexCard;
             showMoreBtn.classList.add("hidden-class");
 
             for (let i = indexCard; i < commentCard.length; i++) 
