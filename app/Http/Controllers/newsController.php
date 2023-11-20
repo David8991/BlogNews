@@ -270,7 +270,7 @@ class newsController extends Controller
     public function usersNewsAll() 
     {   
         //users news
-        $data = articleUser::where("statusArticle", 3)->orderBy('published', "DESC")->get();
+        $data = articleUser::where("statusArticle", 3)->orderBy('published', "desc")->get();
 
         return view("news.usersNewsAll", ["data" => $data]);
     }
