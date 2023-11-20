@@ -7,7 +7,7 @@
 
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
-                <a href="{{ route('home') }}" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <a href="#" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
                     <img width="40px" height="40px" src="../logo128px.png" alt="Blog news icon">
                 </a>
                 <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 BlogNews, Inc</span>
