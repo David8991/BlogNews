@@ -31,7 +31,7 @@
     console.dir(commentCard);
 
     function showMore() {
-        showMoreBtn.addEventlistener("click", () => {
+        showMoreBtn.addEventListener("click", () => {
             cardsShow();
         })
     }
