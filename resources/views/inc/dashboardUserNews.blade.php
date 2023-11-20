@@ -1,11 +1,13 @@
-<div class="p-6 lg:p-8 bg-white border-b border-gray-200">
-    <h4 class="mt-8 mb-5 text-2xl font-smoll text-gray-900">
-        @if (Auth::id() == $admin->id)
-            Статьи Пользователей:
-        @else
-            Ваши Статьи:
-        @endif
-    </h4>
+<div class="p-6 lg:p-8 bg-white border-b border-gray-200" id="adminUsersPosts">
+    @if (Auth::id() == $admin->id)    
+        <h4 class="mt-8 mb-5 text-2xl font-smoll text-gray-900">Статьи Пользователей: </h4>
+    @else
+        <div class="d-flex justify-content-between">
+            <h4 class="mt-8 mb-5 text-2xl font-smoll text-gray-900">Ваши Статьи: </h4> 
+            <a class="btn btn-sm btn-outline-secondary ms-2 px-5 align-self-center" href="{{ route('addNew', $idUser = Auth::id()) }}">Add New</a>
+        </div>
+    @endif
+
     @foreach ($data as $el)
         <!-- Статьи которые видны Администратору -->
         @if (Auth::id() == $admin->id && $el->statusArticle !== 0 && $el->statusArticle !== 2 && $el->id_user !== $admin->id)
@@ -95,10 +97,13 @@
 
 <!-- Статьи Администратора -->
 @if (Auth::id() == $admin->id)
-    <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
-        <h3 class="mt-8 mb-5 text-2xl font-smoll text-gray-900">
-            Ваши Статьи: 
-        </h3>
+    <div class="p-6 lg:p-8 bg-white border-b border-gray-200" id="adminPosts">
+        <div class="d-flex justify-content-between">
+            <h4 class="mt-8 mb-5 text-2xl font-smoll text-gray-900">
+                Ваши Статьи: 
+            </h4> 
+            <a class="btn btn-sm btn-outline-secondary ms-2 px-5 align-self-center" href="{{ route('addNew', $idUser = Auth::id()) }}">Add New</a>
+        </div>
         @foreach ($data as $el)
             @if ($el->id_user == $admin->id && !empty($el->id_user))
                 <div class="mb-3 card text-center">
