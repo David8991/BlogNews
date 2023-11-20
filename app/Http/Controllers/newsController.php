@@ -278,7 +278,7 @@ class newsController extends Controller
     public function usersNewsView($idNew) 
     {   
         $data = articleUser::find($idNew);
-        $comment = DB::table('comments')->where("id_post", $idNew)->get();
+        $comment = DB::table('comments')->where("id_post", $idNew)->orderBy("published", "asc")->get();
 
         return view("news.usersNewsView", ["data" => $data, "comment" => $comment]);
     }
