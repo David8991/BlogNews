@@ -24,7 +24,7 @@
 </div>
 
 <script>
-    let showMoreBtn = document.getElementsByClassName("comments-btn");
+    let showMoreBtn = document.querySelector(".comments-btn");
     let commentCard = document.querySelectorAll(".commentCont");
     let indexCard = 0;
 
