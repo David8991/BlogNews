@@ -61,7 +61,8 @@
     }
 
     if (commentCard.length > 3) cardsShow()
-    else {
+    else 
+    {
         commentCard.forEach(item => {
             item.classList.remove("hidden-class");
         })
