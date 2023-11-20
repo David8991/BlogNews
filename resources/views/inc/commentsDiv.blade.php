@@ -43,21 +43,15 @@
             commentCard[i].classList.remove("hidden-class");
         }
 
-        if (commentCard.length > indexCard + 3) 
+        if (commentCard.length >= indexCard + 3) 
         {
             indexCard += 3;
             showMoreBtn.classList.remove("hidden-class");
             showMore();
-        } 
-        else if (commentCard.length = indexCard + 3)
+        }
+        else
         {
-            indexCard += 3;
-            showMoreBtn.classList.remove("hidden-class");
-            showMore();
-        } 
-        else if (commentCard.length < indexCard + 3)
-        {
-            indexCard = commentCard.length - indexCard;
+            indexCard += commentCard.length - indexCard;
             showMoreBtn.classList.add("hidden-class");
 
             for (let i = indexCard; i < commentCard.length; i++) 
