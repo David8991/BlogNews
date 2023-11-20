@@ -20,10 +20,6 @@ use App\Models\User;
 |
 */
 
-// Route::get('/', function () {
-//     return view('home.home');
-// });
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
