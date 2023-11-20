@@ -25,7 +25,7 @@
 
 <script>
     //          Скрипт для ограничения отображения комментариев и их показа через кнопку
-    
+
     let showMoreBtn = document.querySelector(".comments-btn");
     let commentCard = document.querySelectorAll(".commentCont");
     let indexCard = 0;
@@ -34,7 +34,7 @@
         showMoreBtn.addEventListener("click", () => {
             cardsShow();
         })
-    }
+    } 
 
     function cardsShow () 
     {
