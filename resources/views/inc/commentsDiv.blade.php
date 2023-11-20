@@ -59,7 +59,7 @@
         {
             indexCard = commentCard.length - indexCard;
             showMoreBtn.classList.add("hidden-class");
-            
+
             for (let i = indexCard; i < commentCard.length; i++) 
             {
                 commentCard[i].classList.remove("hidden-class");
@@ -67,5 +67,10 @@
         }
     }
 
-    if (commentCard.length > 3) cardsShow();
+    if (commentCard.length > 3) cardsShow()
+    else {
+        commentCard.forEach(item => {
+            item.classList.remove("hidden-class");
+        })
+    }
 </script>
