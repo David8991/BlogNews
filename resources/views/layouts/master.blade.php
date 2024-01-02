@@ -9,7 +9,7 @@
         @include("inc.header")
 
         <main class="container">
-            @include("inc.firstNew")
+            @include("inc.FirstNew")
 
             
             <div class="row g-5">
