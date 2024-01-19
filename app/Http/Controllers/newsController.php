@@ -12,7 +12,7 @@ class newsController extends Controller
 {
     public function home()
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "top",
@@ -39,7 +39,7 @@ class newsController extends Controller
 
     public function newsWorld () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "world",
@@ -66,7 +66,7 @@ class newsController extends Controller
 
     public function newsRussia () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "country" => "ru",
@@ -93,7 +93,7 @@ class newsController extends Controller
 
     public function newsEconomy () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "business",
@@ -120,7 +120,7 @@ class newsController extends Controller
 
     public function newsTechnology () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "technology",
@@ -147,7 +147,7 @@ class newsController extends Controller
 
     public function newsPolitics () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "politics",
@@ -174,7 +174,7 @@ class newsController extends Controller
 
     public function newsSport () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "sports",
@@ -201,7 +201,7 @@ class newsController extends Controller
 
     public function newsHealth () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "health", 
@@ -228,7 +228,7 @@ class newsController extends Controller
 
     public function newsStyle () 
     {
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "category" => "entertainment",
@@ -254,7 +254,7 @@ class newsController extends Controller
 
     public function newView($id) 
     {   
-        $newsdataApiObj = new NewsdataApi("pub_2860294907a351e51b09309341c65ae2bdceb");
+        $newsdataApiObj = new NewsdataApi("pub_28602f9ca3a31ef0a420aef661790764b979e");
         //news by category
         $data = [
             "qInTitle" => str_replace(":", "", $id), 
