@@ -5,7 +5,7 @@
     <meta name="author" content="David Muradyan and Bootstrap contributors">
     <title>Blog News · @yield("title")</title>
     <meta name="keywords" content="BlogNews, Blog, News, World news, Новости">
-    <script src="https://cdn.tiny.cloud/1/gke34o6i77hr6h4nw91q35652h8tv2b4zdd1n26wl1wre2g4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.3.1/classic/ckeditor.js"></script>
     <link rel="shortcut icon" href="../favicon.png" />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -13,6 +13,13 @@
     @include("inc.style")
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+
+    <style>
+        .ck-editor__editable {
+            min-height: 150px;
+            overflow-y: auto;
+        }
+    </style>
     <!-- Custom styles for this template -->
     @vite(['resources/css/news.css'])
 </head>

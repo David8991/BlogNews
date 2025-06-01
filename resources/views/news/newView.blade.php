@@ -7,7 +7,7 @@
 @include("inc.head")
 
     <body>
-        
+
         @include("inc.darkMode")
 
         @include("inc.header")
@@ -18,12 +18,12 @@
                     <h3 class="text-primary">{{ $data[0]->title }}</h3>
                     <p class="blog-post-meta"><b>Published: </b>{{ \Carbon\Carbon::parse($data[0]->pubDate)->diffForHumans() }}</p>
                     @if(isset($data[0]->creator))
-                        <p class="blog-post-meta">Автор: {{ $data[0]->creator[0] }}</p>
+                        <p class="blog-post-meta">Creator: {{ $data[0]->creator[0] }}</p>
                     @endif
                     @if(isset($data[0]->image_url))
                         <img  src="{{ $data[0]->image_url }}" class="mb-3" alt="" width="100%">
                     @endif
-                    <p>{{ $data[0]->content }}</p>
+                    <p>{{ $data[0]->description }}</p>
                     @if(isset($data[0]->video_url))
                         <video src="{{ $data[0]->video_url }}" class="mb-3"></video>
                     @endif
